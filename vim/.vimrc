@@ -57,7 +57,7 @@ set modelines=4
 set number
 " Enable syntax highlighting
 syntax on
-" Make tabs as wide as two spaces
+" Make tabs as wide as 4 spaces
 set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 " Show “invisible” characters
 set lcs=tab:▸\ ,trail:·,nbsp:_
@@ -94,6 +94,8 @@ endfunction
 noremap <leader>ss :call StripWhitespace()<CR>
 " Save a file as root (,W)
 noremap <leader>W :w !sudo tee % > /dev/null<CR>
+" Call YcmCompleter FixIt
+noremap <leader>yy :YcmCompleter FixIt<CR>
 
 set showbreak=\ +++\         " Wrap-broken line prefix
 set textwidth=0 wrapmargin=0 "DONT INSERT FUCKING NEWLINES IN MY FILES!!!
