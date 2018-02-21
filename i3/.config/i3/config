@@ -21,8 +21,6 @@ exec --no-startup-id kwalletd5
 
 #wifi
 exec --no-startup-id nm-applet
-#bluetooth
-exec --no-startup-id blueberry-tray
 #redshift
 exec --no-startup-id redshift
 

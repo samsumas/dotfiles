@@ -24,7 +24,7 @@ modules-left = i3
 modules-center =
 modules-right = filesystem cpu memory temperature wlan eth battery date
 
-;monitor = ${env:MONITOR:HDMI-1}
+monitor = LVDS1
 width = 100%
 height = 16
 ;offset-x = 1%
