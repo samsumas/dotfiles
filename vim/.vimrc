@@ -93,9 +93,13 @@ function! StripWhitespace()
 endfunction
 noremap <leader>ss :call StripWhitespace()<CR>
 " Save a file as root (,W)
-noremap <leader>W :w !sudo tee % > /dev/null<CR>
+noremap <leader>W :w<CR>!sudo cat % > %<CR>:e!<CR>
 " Call YcmCompleter FixIt
 noremap <leader>yy :YcmCompleter FixIt<CR>
+noremap <leader>ff :%!clang-format -style='{BasedOnStyle: Mozilla, IndentWidth: 4}' <CR>
+" jj escapes input mode
+imap jj <Esc>
+
 
 set showbreak=\ +++\         " Wrap-broken line prefix
 set textwidth=0 wrapmargin=0 "DONT INSERT FUCKING NEWLINES IN MY FILES!!!
