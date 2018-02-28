@@ -96,7 +96,14 @@ noremap <leader>ss :call StripWhitespace()<CR>
 noremap <leader>W :w<CR>!sudo cat % > %<CR>:e!<CR>
 " Call YcmCompleter FixIt
 noremap <leader>yy :YcmCompleter FixIt<CR>
-noremap <leader>ff :%!clang-format -style='{BasedOnStyle: Mozilla, IndentWidth: 4}' <CR>
+function! Format()
+	let save_cursor = getpos(".")
+	let old_query = getreg('/')
+	:%!clang-format -style='{BasedOnStyle: Mozilla, IndentWidth: 4}'
+	call setpos('.', save_cursor)
+	call setreg('/', old_query)
+endfunction
+noremap <leader>ff :call Format() <CR>
 " jj escapes input mode
 imap jj <Esc>
 
