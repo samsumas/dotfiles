@@ -9,53 +9,35 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 ##########OWNMODIFICATIONS#########
-###bizarre daemons that need to be started manually because they aren't services....
-
 #start light-locker, permits to lock screen with lightdm
 exec --no-startup-id light-locker
 #start twmn (for notifications!)
 exec --no-startup-id twmnd &
-
 #passwords
 exec --no-startup-id kwalletd5
-
+#wallpaper
+exec --no-startup-id feh --bg-center Pictures/foxbg.png
 #wifi
 exec --no-startup-id nm-applet
 #redshift
 exec --no-startup-id redshift
-
 #start xcompmgr
 exec --no-startup-id compton -bCG
 #remove the container:
 for_window [class="^.*"] border pixel 2
-###
-
-#wallpaper
-exec --no-startup-id feh --bg-center Pictures/foxbg.png
 #cpu stats in the background
 #exec --no-startup-id conky -c $HOME/.config/i3/conky.conf
-exec --no-startup-id conky -c ${HOME}/.config/conky/conkyrings/rings
+#exec --no-startup-id conky -c ${HOME}/.config/conky/conkyrings/rings
 #polyBar
 exec_always --no-startup-id ${HOME}/.config/polybar/launch.sh
 #font
 font pango:FontAwesome 8
-
-#german layout
-exec --no-startup-id setxkbmap de
-
 #screenshots
 bindsym Print exec spectacle
-
 #brightness
 bindsym XF86MonBrightnessUp exec xbacklight +5
 bindsym XF86MonBrightnessDown exec xbacklight -5
-
-#works for all sink ids and may not working when using multiple running sinks (but bluetooth speaker works...)
-#bindsym XF86AudioRaiseVolume exec pactl set-sink-volume $(pactl list short sinks | grep RUNNING | grep -o '[0-9]\+'| head -n 1) +5%
-#bindsym XF86AudioLowerVolume exec pactl set-sink-volume $(pactl list short sinks | grep RUNNING | grep -o '[0-9]\+'| head -n 1) -5%
-#bindsym XF86AudioMute exec pactl set-sink-mute $(pactl list short sinks | grep RUNNING | grep -o '[0-9]\+'| head -n 1) toggle
-
-#works better then old one, is bluetooth compatible
+#bluetooth compatible
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume $(pactl info | grep -oe 'Default Sink: .*' | sed 's/.*://g') +5%
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume $(pactl info | grep -oe 'Default Sink: .*' | sed 's/.*://g') -5%
 bindsym XF86AudioMute exec pactl set-sink-mute $(pactl info | grep -oe 'Default Sink: .*' | sed 's/.*://g') toggle
