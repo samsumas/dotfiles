@@ -18,6 +18,18 @@ primary = #ffb52a
 secondary = #e60053
 alert = #bd2c40
 
+[bar/VGA]
+inherit = bar/example
+monitor = VGA1
+; deactivate tray
+tray-position =
+
+[bar/HDMI]
+inherit = bar/example
+monitor = HDMI1
+; deactivate tray
+tray-position =
+
 [bar/example]
 
 modules-left = i3
