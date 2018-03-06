@@ -1,0 +1,7 @@
+#!/bin/bash
+# shutdowns pc when battery is low
+
+BATTERY=$(cat /sys/class/power_supply/BAT0/capacity)
+LIMIT=10
+#sends notification and then suspends to disk 2 minutes later (if the battery is lower then limit and if the device isn't charging)
+[ $BATTERY -le $LIMIT ] && [ ! $(cat /sys/class/power_supply/BAT0/status | grep 'Charging') ] && { twmnc -t '/!\Battery low/!\' -c 'Shutdown in 2 minutes' ; sleep 120; [ ! $(cat /sys/class/power_supply/BAT0/status | grep 'Charging') ] && sudo s2disk ;}

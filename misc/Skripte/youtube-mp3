@@ -1,0 +1,2 @@
+#!/bin/zsh
+youtube-dl -i -x --audio-quality 0 $1

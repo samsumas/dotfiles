@@ -1,0 +1,3 @@
+#!/bin/bash
+#shut the pc down
+exec shutdown -h now

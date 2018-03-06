@@ -1,0 +1,2 @@
+ssh alarm@alarmpi "cat botlogs" > /tmp/$$.log
+vim /tmp/$$.log

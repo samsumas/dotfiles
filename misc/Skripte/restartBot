@@ -1,0 +1,1 @@
+ssh alarm@alarmpi "cd bot; git pull; sudo systemctl restart startBot"
