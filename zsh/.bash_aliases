@@ -10,7 +10,7 @@ alias pwd="pwd -P"
 alias mosml='rlwrap mosml'
 alias youtubemp3="youtube-dl -i -x --audio-quality 0"
 alias mount="udisks -p"
-set_bg="feh --bg-center ~/Pictures/foxbg.png"
+set_bg="feh --bg-center ~/bg"
 alias sndScreenVGA="xrandr --output LVDS1 --primary --auto --output VGA1 --above LVDS1 --auto ; $set_bg"
 alias sndScreenHDMI="xrandr --output LVDS1 --primary --auto --output HDMI1 --above LVDS1 --auto ; $set_bg"
 alias Cformat="clang-format -style='{BasedOnStyle: Mozilla, IndentWidth: 4}'"
