@@ -16,7 +16,7 @@ exec --no-startup-id twmnd &
 #passwords
 exec --no-startup-id kwalletd5
 #wallpaper
-exec --no-startup-id feh --bg-center Pictures/foxbg.png
+exec --no-startup-id feh --bg-center ~/bg
 #wifi
 exec --no-startup-id nm-applet
 #redshift
