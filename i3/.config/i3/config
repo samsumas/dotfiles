@@ -25,6 +25,9 @@ exec --no-startup-id redshift
 exec --no-startup-id compton -bCG
 #remove the container:
 for_window [class="^.*"] border pixel 2
+#clipboard manager
+exec --no-startup-id autocutsel -fork &
+exec --no-startup-id autocutsel -selection PRIMARY -fork &
 #cpu stats in the background
 #exec --no-startup-id conky -c $HOME/.config/i3/conky.conf
 #exec --no-startup-id conky -c ${HOME}/.config/conky/conkyrings/rings
@@ -50,7 +53,8 @@ set $mod Mod4
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec konsole
+#bindsym $mod+Return exec konsole
+bindsym $mod+Return exec ~/.local/bin/urxvt
 
 # kill focused window
 bindsym $mod+Shift+q kill
