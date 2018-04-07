@@ -4,11 +4,12 @@ Xcursor.size: 12
 URxvt*scrollTtyOutput: false
 URxvt*scrollWithBuffer: true
 URxvt*scrollTtyKeypress: true
-URxvt.font: xft:UbuntuMono:size=12
+URxvt.font: xft:UbuntuMono,fontawesome,DejaVu Sans:size=12
 URxvt.scrollBar: false
 URxvt.mouseWhellScrollPage: true
 URxvt.background: rgb:24/28/2c
 URxvt.foreground: rgb:ef/f0/f1
+URxvt.letterSpace: -1
 
 *.color0: #31363b
 *.color1: #ed1515
