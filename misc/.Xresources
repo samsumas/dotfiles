@@ -1,2 +1,30 @@
 Xcursor.theme: breeze_cursors
 Xcursor.size: 12
+
+URxvt*scrollTtyOutput: false
+URxvt*scrollWithBuffer: true
+URxvt*scrollTtyKeypress: true
+URxvt.font: xft:UbuntuMono:size=12
+URxvt.scrollBar: false
+URxvt.mouseWhellScrollPage: true
+URxvt.background: rgb:24/28/2c
+URxvt.foreground: rgb:ef/f0/f1
+
+*.color0: #31363b
+*.color1: #ed1515
+*.color2: #11d116
+*.color3: #f67400
+*.color4: #1d99f3
+*.color5: #1d99f3
+*.color6: #9b59b6
+*.color7: #1abc9c
+*.color8: #eff0f1
+*.color9: #cc342b
+*.color10: #198844
+*.color11: #fba922
+*.color12: #3971ed
+*.color13: #a36ac7
+*.color14: #3971ed
+*.color15: #ffffff
+*.foreground: #eff0f1
+*.background: #24282c
